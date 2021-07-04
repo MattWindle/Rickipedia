@@ -1,12 +1,13 @@
 
 .container{
-  height: 100vh;
   display: grid;
   grid-template-columns: 3fr 7fr;
 }
+.blur{
+  filter: blur(5px);
+}
 aside{
   background-color: red;
-  height: 100vh;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -56,4 +57,68 @@ main{
   background-color: #F5F5F5;
   height: 100vh;
   padding: 80px;
+}
+
+.character-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px
+}
+.single-character img{
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.single-character-info{
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  box-shadow: 4px 15px 15px rgba(0,0,0,0.12);
+}
+.single-character-info img{
+  border-radius: 10px;
+  margin-right: 20px;
+  min-width: 300px;
+  object-fit: contain;
+  align-self: baseline;
+}
+.single-character-info p{
+  margin-bottom: 6px;
+}
+.single-character-info h3.name{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.single-character-info-content{
+  width: 100%;
+}
+.single-character-info-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(245, 245, 245, .55)
+}
+.single-character-info ul{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px
+}
+.single-character-info ul li{
+  text-transform: capitalize;
+}
+.single-character-info ul li:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
