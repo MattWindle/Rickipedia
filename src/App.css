@@ -58,7 +58,20 @@ main{
   height: 100vh;
   padding: 80px;
 }
-
+.btn{
+  all: unset;
+  border: 2px solid #373E40;
+  padding: 0.5em 0.75em;
+  border-radius: 5px;
+  color: #373E40;
+  cursor: pointer;
+}
+.pagination{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .character-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -96,6 +109,14 @@ main{
 }
 .single-character-info-content{
   width: 100%;
+  position: relative;
+}
+.single-character-info-content .close{
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 .single-character-info-wrapper{
   position: fixed;
@@ -112,13 +133,18 @@ main{
 .single-character-info ul{
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 10px
 }
 .single-character-info ul li{
   text-transform: capitalize;
+  padding: 0.25em 0.65em;
+  background-color: #eee;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.25s ease;
 }
 .single-character-info ul li:hover{
-  text-decoration: underline;
   cursor: pointer;
+  background-color: rgb(212, 212, 212);
 }
